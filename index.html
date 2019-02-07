@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>jQuery</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h2>Use of focusin and blur in input fields and change function ussed when file uploaded</h2>
+        <form>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Upload file:</label>
+            <input type="file" class="form-control" id="file">
+          <input type="submit" class="submit btn btn-primary" value="Submit"/>
+          </div>
+          
+        </form>
+    </div>
+    
+    
+        
+        <section class="padding50">
+            <div class="container">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">1- Hiding Message by click event handler</h5>
+                    </div>
+                    <div class="card-body">
+                        <input type="button" class="btn btn-danger" value="Hide" id="hide_msg"/>
+                        <p class="msg">Hide this msg by above button</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="padding50">
+            <div class="container">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">2- Use of keydown and blur here</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Whatever you type in below field, you will see in span tag and when you click outside the span will disappear.</p>
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control emailField" id="email" placeholder="Enter email" name="email">
+                        <span class="extend"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="padding50">
+            <div class="container">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">3- Use of change function</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Whatever you select here. It will display below the field.</p>
+                        <p>Used change function and get the value and displaying in the span</p>
+                        <select class="form-control" id="list">
+                            <option value="select">Select your option</option>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                        <span class="append_data"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="padding50">
+            <div class="container">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">4- Use of Submit function</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Whatever you submit here. It will display below the field.</p>
+                        <p>Used <strong>submit()</strong> function and get the value and displaying in the span</p>
+                        <input type="text" id="submit_area" placeholder="Submit your name" class="form-control">
+                        <span class="submit_data"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="padding50">
+                <div class="container">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">5- Use of Mouse event function</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>Add a class when mouse enter and removing when leave(used mouseenter() and mouseleave() funtion.)</p>
+                            <a href="" class="link">Read More</a>
+                            <div class="m-5"></div>
+                            <p>Note : we can also do this this by hover() function only</p>
+                            <a href="" class="link_hover">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>
