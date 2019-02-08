@@ -73,6 +73,33 @@ $(document).ready(function(){
         $(this).toggleClass('bold');
     });
 
+    $('.click').click(function(e){
+        //console.log("test");
+        e.preventDefault();
+        $(".toggle-div").toggle('slow',function(){
+            $('.log').text("Transition completed").css({"color":'green', "font-weight":'bold', });
+        });
+        //return false;
+    });
+
+    $('#combine').click(function(){
+        var combine_txt = "";
+        var failed = false;
+        $(".combine_field").each(function(){
+          combine_txt += $(this).val() + ' ';
+          if($(this).val() == ''){
+              $failed = true;
+              alert('Fill out all fields');
+          }
+          else{
+            $failed = false;
+            alert('thanks');
+          }
+        });
+        $('.complete').text(combine_txt);
+        //return false;
+    });
+
     
 });
 
