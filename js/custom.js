@@ -100,7 +100,41 @@ $(document).ready(function(){
         //return false;
     });
 
-    
+
+        //$('#checkField').change(function(){
+        //  
+        //});
+        $('#checkField').click(function(){  
+            if($(this).is(":checked")){
+                $('.submitBtn').removeAttr('disabled');
+            }
+            else if($(this).is(":not(:checked)")){
+                $('.submitBtn').attr('disabled', 'disabled');
+            }
+        });
+        function blink_txt() {
+            $('.blink').fadeOut(500);
+            $('.blink').fadeIn(500);
+        }
+        setInterval(blink_txt, 1000);
+        $('tr:even td').css('background-color','red');
+        var maxLength = 15;
+        $('#textarea').keyup(function(){
+            var textLength = maxLength  - $('#textarea').val().length;
+            $('.textlen').text(textLength);
+        });
+         
+        var test = {
+            id: "test",
+            class: "divClass",
+            css: {
+                "color": "Green"
+            }
+        };
+
+        var item = $("<div>", test);
+        item.html('Appended div here with id, class and style');
+        $(".appendhere").append(item);
 });
 
 $('.submit').click(function(){
